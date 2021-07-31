@@ -1,7 +1,7 @@
 import React from 'react';
 
 import xIcon from '../../assets/x-circle.svg';
-import arrowIcon from '../../assets/arrow-right.svg';
+
 
 import * as S from './styles';
 import { Link } from 'react-router-dom';
