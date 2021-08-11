@@ -74,7 +74,7 @@ const Explorer = () => {
     event.preventDefault();
 
     if (!newSearch) {
-      setInputError('Favor preencha o campo!')
+      setInputError('Fill in field!')
       return;
     }
 
@@ -93,7 +93,7 @@ const Explorer = () => {
 
           setNewSearch('');
           setInputError('');
-        }).catch(() => setInputError('Houve um erro na sua busca. Tente outro repositório ou usuário.'))
+        }).catch(() => setInputError('Error in search.  Try another user.'))
   }
 
   function handleExcludeRepository(id: number) {
@@ -113,17 +113,17 @@ const Explorer = () => {
       <S.Title>Explore no Github.</S.Title>
       <S.Form hasError={Boolean(inputError)} onSubmit={handleSearch}>
         <select value={filter} onChange={e => setFilter(e.target.value)}>
-          <option value="repos">Repositórios</option>
-          <option value="users">Usuários</option>
+          <option value="repos">Repositories</option>
+          <option value="users">Users</option>
         </select>
         <input 
           type="text" 
-          placeholder="Digite aqui"
+          placeholder="type here"
           value={newSearch} 
           onChange={e => setNewSearch(e.target.value)}
         />
         <button type="submit">
-          <img src={searchIcon} alt="Pesquisar"/>
+          <img src={searchIcon} alt="Look for"/>
         </button>
 
       <S.InputError>{inputError}</S.InputError>
@@ -131,7 +131,7 @@ const Explorer = () => {
 
       <S.MainContent>
         { !repositories.length && !users.length && 
-          <S.Search src={searchImg} alt="Nenhum recente"/> }
+          <S.Search src={searchImg} alt="none recent"/> }
 
         {
           filter === 'repos' && repositories.map(repo => (
