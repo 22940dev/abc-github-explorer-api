@@ -88,7 +88,7 @@ const Repository = () => {
                 user={item.user}
                 labels={item.labels}
               />
-            )) : <strong>Nenhuma issue a ser listada</strong>
+            )) : <strong>No issue to list</strong>
           }
         </S.IssuesContent>
       </S.Content>
