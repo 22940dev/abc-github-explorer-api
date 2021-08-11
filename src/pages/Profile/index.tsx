@@ -66,7 +66,7 @@ const Profile = () => {
             />
         }
         <S.RepositoriesList>
-          <strong>Repositórios</strong>
+          <strong>Repositories</strong>
           
           { 
             repos.length ? repos.map(item => (
@@ -77,7 +77,7 @@ const Profile = () => {
                 name={item.name}
                 full_name={item.full_name}
               />
-            )) : <strong>Nenhum repositório a ser listado</strong>
+            )) : <strong>No repo to list</strong>
 
           }
         </S.RepositoriesList>
